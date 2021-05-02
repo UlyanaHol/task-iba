@@ -20,7 +20,7 @@ var commentRoutes    = require("./routes/comments"),
 app.locals.moment = require('moment');
 
 // connect to  database
-var url = process.env.DATABASEURL || "mongodb://localhost/task";
+const url = "mongodb+srv://ulyanahol:s64xejhAzf676EhF@cluster0.mskwd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority&socketTimeoutMS=360000&connectTimeoutMS=360000";
 mongoose.connect(url,{useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
 
 app.use(bodyParser.urlencoded({extended: true}));
