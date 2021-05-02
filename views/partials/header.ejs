@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>News</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/stylesheets/main.css">
+	<link rel="stylesheet" href="/stylesheets/mobile.css">
+	<link rel="stylesheet" href="/stylesheets/desktop.css">
+	<link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/tex-gyre-adventor" type="text/css"/>
+	<link href="http://fonts.cdnfonts.com/css/helvetica-neue-9" rel="stylesheet">
+  <% if(current_path === "/login" || current_path === "/register") { %>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/login.css">
+	<% } %>
+	<% if(current_path === "/news") { %>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/index.css">
+  <% } %>
+
+</head>
+<body>
+<div class="container" id="container">
+
+		<!-- DESKTOP -->
+		<div class="bar" id="desktop">
+			<div class="header-section">
+				<div class="header-item"><a href="/news" id="active-desktop">HOME</a></div>
+				<div class="header-item"><a href="#">SPORT</a></div>
+				<div class="header-item"><a href="#">BLOG</a></div>
+				<div class="header-item"><a href="#">PAGES</a></div>
+				<div class="header-item"><a href="#">CONTACT</a></div>		
+			</div>
+			<div class="header-section">
+				<% if(!currentUser){ %>
+					<div class="header-item" id="login"><a href="login">LOGIN</a></div>
+				<% } else { %>
+					<div class="header-item" id="login"><a href="#">Signed in as <%=currentUser.username%></a></div>
+					<div class="header-item" id="login"><a href="logout">LOGOUT</a></div>
+				<% } %>		
+			</div>
+		</div>	
+		<!-- MOBILE MENU-->
+		<div id="burg">
+			<a id="menu" href="#">MENU</a>
+		</div>
+		<!-- ------------ -->
+
+
+  <div class="container">
+
+    <% if(error && error.length > 0){ %>
+    <div class="alert alert-danger" role="alert">
+      <%= error %>
+    </div>
+    <% } %>
+    <% if(success && success.length > 0){ %>
+    <div class="alert alert-success" role="alert">
+      <%= success %>
+    </div>
+    <% } %>

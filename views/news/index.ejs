@@ -1,0 +1,275 @@
+<%- include ("../partials/header") %>
+
+        
+			
+	<div class="title-section">
+		<div class="title">
+			<p id="title">Fast<strong>News</strong></p>
+			<h6 id="subtitle">Clean, cool and powerfull magazine theme</h6>
+		</div>
+	</div>
+
+	<div class="title-mobile">
+		<p id="title">Fast<strong>News</strong></p>
+		<h6 id="subtitle-mobile">Clean, cool and powerfull magazine theme</h6>
+	</div>
+	<hr id="hr">
+
+<section class="flex-container">
+		<!-- LEFT HALF -->
+		<article class="col-1-2">
+		<div class="left-side">
+			<!-- Champions League/Football news -->
+			<div class="league">
+					<%if(news.filter(n => n.category === "Football News")[0]){%>
+						<a href="/news/<%=news.filter(n => n.category === "Football News")[0]._id%>"><img src="<%=news.filter(n => n.category === "Football News")[0].image%>" id="league">
+							<div class="football-news">
+								<h5 class="in">in <%=news.filter(n => n.category === "Football News")[0].category%> | <%=news.filter(n => n.category === "Football News")[0].created_at.toLocaleDateString(undefined, {year: 'numeric', month: 'long', day: 'numeric' })%></h5>
+								<h2 class="league-title"><%=news.filter(n => n.category === "Football News")[0].name%></h2>
+								<h3 class="description"><%=news.filter(n => n.category === "Football News")[0].description%></h3>
+							</div>
+						</a>
+					<% } %>
+			</div>
+
+<!-- GSU news -->
+			<div class="sport">
+				<div class="left-block-1">
+					<h2 class="caption">ГГУ</h2>
+					<div class="items">
+						<div class="mainitem">
+								<%if (news.filter(n => n.category === "GSU")[0]){%>
+									<a href="/news/<%=news.filter(n => n.category === "GSU")[0]._id%>" id="link">
+										<img src="<%=news.filter(n => n.category === "GSU")[0].image%>" id="dzudo">
+										<div class="main-items">		
+											<h2 class="name"><%=news.filter(n => n.category === "GSU")[0].name%></h2>
+											<h4 class="date">&ndash; <%=news.filter(n => n.category === "GSU")[0].created_at.toLocaleDateString(undefined, {year: 'numeric', month: 'long', day: 'numeric' })%></h4>
+											<h4 class="sub"><%=news.filter(n => n.category === "GSU")[0].description%></h4>
+										</div>
+									</a>
+								<% } %>
+						</div>
+						
+						<div class="warning">
+						<div class="sideitem">
+							<div class="side-items side">
+									<%if(news.filter(n => n.category === "GSU")[1]){%>
+										<div class="main-right">
+											<a href="/news/<%=news.filter(n => n.category === "GSU")[1]._id%>" id="link">
+													<img src="<%=news.filter(n => n.category === "GSU")[1].image%>" id="mini" hspace="15">
+												<div>		
+													<h2 class="sub-right"><%=news.filter(n => n.category === "GSU")[1].name%></h2>
+													<h4 class="sub-side"><%=news.filter(n => n.category === "GSU")[1].description%></h4>
+												</div>
+											</a>	
+										</div>
+									<% } %>
+							</div>
+						</div>
+					
+						
+						<div class="sideitem">
+							<div class="side-items side">
+								<% for (i = 2; i < 4; i++) { %>
+									<%if(news.filter(n => n.category === "GSU")[i]){%>
+										<div class="right-with-bottom-border">
+											<a href="/news/<%=news.filter(n => n.category === "GSU")[i]._id%>" id="link">
+												<div>	
+													<h2 class="sub-right"><%=news.filter(n => n.category === "GSU")[i].name%></h2>
+													<h4 class="sub-side"><%=news.filter(n => n.category === "GSU")[i].description%></h4>
+												</div>
+											</a>	
+										</div>
+									<% }} %>
+							</div>
+						</div>
+							</div>
+					</div>	
+				</div>	
+				</div>
+	<!-- Entertainment news -->
+			<div>
+				<div class="left-block-2">
+					<h2 class="caption">КОНЦЕРТЫ</h2>
+					<div class="concert">
+						<div class="mainitem">
+								<%if (news.filter(n => n.category === "Entertainment")[0]){%>
+									<a href="/news/<%=news.filter(n => n.category === "Entertainment")[0]._id%>" id="link">
+										<img src="<%=news.filter(n => n.category === "Entertainment")[0].image%>" id="rock">
+										<div class="main-items">		
+											<h2 class="name"><%=news.filter(n => n.category === "Entertainment")[0].name%></h2>
+											<h4 class="date">&ndash; <%=news.filter(n => n.category === "Entertainment")[0].created_at.toLocaleDateString(undefined, {year: 'numeric', month: 'long', day: 'numeric' })%></h4>
+											<h4 class="sub"><%=news.filter(n => n.category === "Entertainment")[0].description%></h4>
+										</div>
+									</a>
+								<% } %>
+						</div>	
+						
+						<div class="warning">
+						<div class="sideitem">
+							<div class="side-items side">
+									<%if(news.filter(n => n.category === "Entertainment")[1]){%>
+										<div class="main-right">
+											<a href="/news/<%=news.filter(n => n.category === "Entertainment")[1]._id%>" id="link">
+													<img src="<%=news.filter(n => n.category === "Entertainment")[1].image%>" id="horizon" hspace="15">
+												<div>
+													<h2 class="sub-right"><%=news.filter(n => n.category === "Entertainment")[1].name%></h2>
+													<h4 class="sub-side"><%=news.filter(n => n.category === "Entertainment")[1].description%></h4>
+														
+												</div>
+											</a>	
+										</div>
+									<% } %>
+							</div>
+						</div>
+					
+						
+						<div class="sideitem">
+							<div class="side-items side">
+								<% for (i = 2; i < 4; i++) { %>
+									<%if(news.filter(n => n.category === "Entertainment")[i]){%>
+										<div class="right-with-bottom-border">
+											<a href="/news/<%=news.filter(n => n.category === "Entertainment")[i]._id%>" id="link">
+												<div>
+													<h2 class="sub-right"><%=news.filter(n => n.category === "Entertainment")[i].name%></h2>
+													<h4 class="sub-side"><%=news.filter(n => n.category === "Entertainment")[i].description%></h4>
+												</div>
+											</a>	
+										</div>
+									<% }} %>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>		
+	</article>
+	
+	<!-- RIGHT HALF -->
+	<article class="col-1-2">
+		<div class="right-side">
+			<!-- Music news -->
+			<div class="music-news">
+				<h2 class="caption caption-music">МУЗЫКА</h2>
+				<div class="music">
+					<% news.filter(n => n.category === "Music").forEach(function(news){ %>
+							<div class="col-1-3">
+								<a href="/news/<%=news._id%>" id="link">
+									<img src="<%=news.image%>" id="music">
+									<h2 class="name"><%=news.name%></h2>
+									<h4 class="date">&ndash; <%=news.created_at.toLocaleDateString(undefined, {year: 'numeric', month: 'long', day: 'numeric' })%></h4>
+									<h4 class="sub"><%=news.description%></h4>
+								</a>
+							</div>
+						<%})%>
+				</div>
+			</div>
+			
+			<div class="right-down-corner">
+				<div class="right-down-corner-left-side">
+						
+						
+						<!-- Barselona news -->
+						
+							<h2 class="caption">БАРСЕЛОНА</h2>
+							<div class="sportsman">
+								<div class="sportsmans">
+									<%if (news.filter(n => n.category === "Sport")[0]){%>
+											<a href="/news/<%=news.filter(n => n.category === "Sport")[0]._id%>" id="link">
+												<img src="<%=news.filter(n => n.category === "Sport")[0].image%>" id="mens">
+												<h2 class="name"><%=news.filter(n => n.category === "Sport")[0].name%></h2>
+												<h4 class="date">&ndash; <%=news.filter(n => n.category === "Sport")[0].created_at.toLocaleDateString(undefined, {year: 'numeric', month: 'long', day: 'numeric' })%></h4>
+												<h4 class="sub sub-mens"><%=news.filter(n => n.category === "Sport")[0].description%></h4> 
+											</a>
+									<% } %>
+								</div>
+								<% for (i = 1; i < 3; i++) { %>
+									<%if(news.filter(n => n.category === "Sport")[i]){%>
+										<div class="movie-sportsmans">
+											<a href="/news/<%=news.filter(n => n.category === "Sport")[i]._id%>" id="link">
+												<img src="<%=news.filter(n => n.category === "Sport")[i].image%>" class="sportsman-small-pic" hspace="15">
+												<div class="side-sportsman">
+													<h2 class="name"><%=news.filter(n => n.category === "Sport")[i].name%></h2>
+													<h4 class="sub sub-mens"><%=news.filter(n => n.category === "Sport")[i].description%></h4> 
+												</div>
+											</a>
+										</div>
+								<% }} %>
+							</div>
+
+						
+						<!-- NHL news -->
+						<div class="nhl-mobile">
+							<h2 class="caption">НХЛ</h2>
+							<div class="nhl">
+								<%if (news.filter(n => n.category === "NHL")[0]){%>
+										<div class="right-down-corner" style="border-style: none">
+											<a href="/news/<%=news.filter(n => n.category === "NHL")[0]._id%>" id="link">
+												<h2 class="name"><%=news.filter(n => n.category === "NHL")[0].name%></h2>
+												<h4 class="date">&ndash; <%=news.filter(n => n.category === "NHL")[0].created_at.toLocaleDateString(undefined, {year: 'numeric', month: 'long', day: 'numeric' })%></h4>
+												<h4 class="sub sub-mens"><%=news.filter(n => n.category === "NHL")[0].description%></h4> 
+											</a>	
+										</div>
+								<% } %>
+								<%if (news.filter(n => n.category === "NHL")[1]){%>
+										<div class="right-down-corner" style="padding-top: 20px;">
+											<a href="/news/<%=news.filter(n => n.category === "NHL")[1]._id%>" id="link">
+												<img src="<%=news.filter(n => n.category === "NHL")[1].image%>" class="nhl-pic" hspace="15">
+												<div class="side-sportsman">
+												<h2 class="name"><%=news.filter(n => n.category === "NHL")[1].name%></h2>
+												<h4 class="date">&ndash; <%=news.filter(n => n.category === "NHL")[1].created_at.toLocaleDateString(undefined, {year: 'numeric', month: 'long', day: 'numeric' })%></h4>
+												<h4 class="sub sub-mens"><%=news.filter(n => n.category === "NHL")[1].description%></h4> 
+													</div>
+											</a>	
+										</div>
+								<% } %>
+							</div>
+						</div>
+						</div>
+				
+				<!-- VIDEO -->
+			
+				<div class="right-down-corner-right-side">
+					<h2 class="caption">ВИДЕО</h2>
+					<%if (news.filter(n => n.category === "Video")[0]){%>
+							<div class="video">
+								<a href="/news/<%=news.filter(n => n.category === "Video")[0]._id%>" id="link">
+									<h2 class="name"><%=news.filter(n => n.category === "Video")[0].name%></h2>
+									<h4 class="date">&ndash; <%=news.filter(n => n.category === "Video")[0].created_at.toLocaleDateString(undefined, {year: 'numeric', month: 'long', day: 'numeric' })%></h4>
+									<video controls poster="<%=news.filter(n => n.category === "Video")[0].image%>">
+										<source src="" type="video/mp4">
+										Your browser does not support the video tag.
+									</video>
+								</a>		
+							</div>
+						<% } %>
+					<%if (news.filter(n => n.category === "Video")[1]){%>
+							<div class="video video">
+								<a href="/news/<%=news.filter(n => n.category === "Video")[1]._id%>" id="link">
+									<h2 class="name"><%=news.filter(n => n.category === "Video")[1].name%></h2>
+									<h4 class="date">&ndash; <%=news.filter(n => n.category === "Video")[1].created_at.toLocaleDateString(undefined, {year: 'numeric', month: 'long', day: 'numeric' })%></h4>
+									<video controls poster="<%=news.filter(n => n.category === "Video")[1].image%>">
+										<source src="" type="video/mp4">
+										Your browser does not support the video tag.
+									</video>
+								</a>		
+							</div>
+						<% } %>
+					<%if (news.filter(n => n.category === "Video")[2]){%>
+							<div class="video-without-bottom-border">
+								<a href="/news/<%=news.filter(n => n.category === "Video")[2]._id%>" id="link">
+									<h2 class="name"><%=news.filter(n => n.category === "Video")[2].name%></h2>
+									<h4 class="date">&ndash; <%=news.filter(n => n.category === "Video")[2].created_at.toLocaleDateString(undefined, {year: 'numeric', month: 'long', day: 'numeric' })%></h4>
+									<video controls poster="<%=news.filter(n => n.category === "Video")[2].image%>">
+										<source src="" type="video/mp4">
+										Your browser does not support the video tag.
+									</video>
+								</a>
+							</div>
+						<% } %>
+			</div>
+					</div>
+		</article>
+		 </section>
+
+<%- include ("../partials/footer") %>
