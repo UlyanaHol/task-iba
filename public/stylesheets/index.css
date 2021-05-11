@@ -1,6 +1,141 @@
-/*---------DESKTOP---------*/
+@media (max-width: 768px) {
+
+	#mobile-nav {
+		font-size: 35px;
+		padding-left: 70px;
+	}
+	
+	#active-desktop {
+		display: none;
+	}
+	
+	#login {
+		display: none;
+	}
+	
+	#desktop-nav {
+		display: none;
+	}
+	
+	.col-1-2 {
+    	flex: 0 1 100%;
+		margin-bottom: -40px;
+    }
+	
+	select {
+    padding: 5px 10px;
+    border: 1px solid #098D94;
+    color: #757575;
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 300px;
+  }
+}
+
 @media screen and (min-width: 768px) {
-  .mobile-tab, #burg, #mobile, .title-mobile, #hr {
+	.header-section {
+  display: flex;
+  align-items: center;
+  margin-left: -25px;
+}
+	
+	#mobile-nav {
+		display: none;
+	}
+
+.header-item {
+  padding: 10px 15px;
+  font-size: 20px;
+  margin-left: -10px;
+}
+	select {
+    display: none;
+  }
+}
+
+.col-1-3 {
+    width: 33%;
+  }
+
+.side-sportsman {
+	margin-top: -15px;
+}
+
+.in {
+	font-size: 80%;
+}
+
+.sub, .sub-side {
+		line-height: 180%;
+		font-size: 90%;
+	}
+
+.name {
+		font-weight: bold;
+		font-size: 160%;
+	}
+
+.right-down-corner {
+	border-top: 1px solid #d6d6d6;
+}
+
+.flex-container {
+	padding-top: 10px;
+	margin-top: -20px;
+	border-right: 1px solid #d6d6d6;
+	border-left: 1px solid #d6d6d6;
+}
+
+#subtitle-mobile {
+	font-size: 14px;
+    color: #7F807B;
+    text-align: center;
+    margin-top: -25px;
+}
+
+.title-mobile {
+	margin-top: -20px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+
+
+#title {
+  font-size: 60px;
+  font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+  text-align: center;
+  margin-top: 15px;
+  letter-spacing: -5px;
+}
+
+#subtitle {
+  font-size: 14px;
+  color: #7F807B;
+  text-align: center;
+  margin-top: -65px;
+}
+
+
+
+hr {
+  border: none;
+  background-color: #d6d6d6;
+  height: 1px;
+  margin-top: 20px;
+  margin-left: 8%;
+  margin-right: 8%;
+}
+
+#desktop, .title-section {
+  display: none;
+}
+
+.mobile-tab, #burg, #mobile, .title-mobile, #hr {
     display: none;
   }
 	
@@ -47,7 +182,7 @@
 	
 	.warning {
 		display: flex;
-  flex-flow: column wrap;
+  		flex-flow: column wrap;
 	}
 	
 	.sideitem {
@@ -124,8 +259,8 @@
     background: white;
     color: black;
     padding: 15px;
-    padding-bottom: 30%;
-    margin-right: -15px;
+    padding-bottom: 30px;
+    margin-right: -10px;
 	padding-top: 8px;
   }
 	
@@ -138,7 +273,7 @@
     border-left: 1px solid #d6d6d6;
     border-right: 1px solid #d6d6d6;
     display: flex;
-    padding-bottom: 3.5%;
+    padding-bottom: 50px;
   }
 	
 	.in {
@@ -150,29 +285,29 @@
     width: 80%;
     opacity: 0.93;
     margin-top: -150px;
-    padding: 0.5% 1.5% 1% 1.5%;
+    padding: 3px 5px 2px 3px;
     margin-left: 50px;
     margin-right: auto;
   }
 	
   #league {
     width: 98%;
-    padding: 3.5%;
+    padding: 20px;
   }
 	
   .league-title {
     font-size: 40px;
-    margin-top: -1%;
+    margin-top: -3px;
   }
 	
   .description {
-    margin-top: 2%;
+    margin-top: 5px;
     font-size: 70%;
   }
 	
   .caption {
     color: #098D94;
-    padding-bottom: 1%;
+    padding-bottom: 2px;
     border-bottom-color: #d6d6d6;
     border-bottom-style: double;
 	  font-size: 140%;
@@ -181,12 +316,12 @@
 	
   #rock {
     width: 80%;
-    margin-bottom: -2%;
+    margin-bottom: -3px;
   }
 	
   #dzudo {
     width: 82%;
-    margin-bottom: -2%;
+    margin-bottom: -3px;
   }
 	
   #link {
@@ -199,7 +334,7 @@
 	
   .date {
     color: #02b3bd;
-    margin-top: -2%;
+    margin-top: -4px;
   }
 	
   .sub {
@@ -217,7 +352,7 @@
   }
 	
   .sub-side {
-    margin-top: -2%;
+    margin-top: -3px;
     color: gray;
   }
 	
@@ -225,7 +360,7 @@
 	  font-weight: bold;
 		font-size: 160%;
     color: black;
-    padding-top: -5%;
+    padding-top: -10px;
   }
 	
   .main-right {
@@ -237,7 +372,7 @@
   }
 	
   .side-items {
-    margin-left: -7%;
+    margin-left: -14px;
   }
 	
   .side {
@@ -246,8 +381,8 @@
 	
   .music-news {
     border-bottom: 1px solid #d6d6d6;
-    margin-left: 3%;
-    margin-right: 2%;
+    margin-left: 5px;
+    margin-right: 3px;
   }
 	
   .music {
@@ -257,7 +392,7 @@
   }
 	
   .caption-music {
-    margin-right: 1.5%;
+    margin-right: 3px;
   }
 	
   #music {
@@ -274,14 +409,14 @@
   }
 	
   .left-block-1 {
-    padding-left: 3.5%;
-    padding-right: 3.5%;
-	  padding-top: 3.5%;
+    padding-left: 12px;
+    padding-right: 12px;
+	  padding-top: 12px;
   }
 	
 	  .left-block-2 {
-    padding-left: 3.5%;
-    padding-right: 3.5%;
+    padding-left: 12px;
+    padding-right: 12px;
 	  padding-top: -40px;
   }
 	
@@ -314,7 +449,7 @@
   }
 	
   .movie-sportsmans {
-    padding-top: 4%;
+    padding-top: 12px;
 	  border-top: 1px solid #d6d6d6;
   }
 	
@@ -345,7 +480,5 @@
     margin-left: 0;
   }
 	
-  .select {
-    display: none;
-  }
-}
+  
+
